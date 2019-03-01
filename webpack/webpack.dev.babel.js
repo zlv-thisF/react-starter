@@ -12,6 +12,7 @@ const devConfig = {
         contentBase: paths.appPublic,
         historyApiFallback: true,
         hot: true,
+        inline: true,
         publicPath: paths.PUBLIC_PATH,
         overlay: {
             warnings: false,
@@ -28,7 +29,8 @@ const devConfig = {
         new HtmlWebpackPlugin({
             inject: true,
             template: paths.appHtml,
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ]
 };
 
