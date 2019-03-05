@@ -22,15 +22,11 @@
     ],
     "linters": {
       "*.{js,jsx}": [
-        "eslint --no-ignore --fix",
+        "npm run lint-js",
         "git add --force"
       ],
-      "*.{json,md,graphql}": [
-        "prettier --write",
-        "git add --force"
-      ],
-      "*.{less}": [
-        "stylelint --syntax less",
+      "*.{less|css}": [
+        "npm run lint-css",
         "git add --force"
       ]
     }
