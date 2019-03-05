@@ -22,12 +22,10 @@
     ],
     "linters": {
       "*.{js,jsx}": [
-        "npm run lint-js",
-        "git add --force"
+        "npm run lint-js"
       ],
       "*.{less|css}": [
-        "npm run lint-css",
-        "git add --force"
+        "npm run lint-css"
       ]
     }
   },
