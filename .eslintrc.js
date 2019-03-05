@@ -23,7 +23,9 @@ module.exports = {
     "prettier/prettier": "error",
     "semi": ["error", "always"],
     "quotes": ["error", "double"],
+    "no-param-reassign": "off",
     "react/jsx-filename-extension": "off",
+    "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": [
       "error", {"devDependencies": ["./webpack/**/*", ]}
     ]
