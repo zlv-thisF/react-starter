@@ -1,13 +1,13 @@
 module.exports = {
-    parser: 'sugarss',
-    plugins: {
-        'postcss-flexbugs-fixes': {},
-        'postcss-preset-env': {
-            autoprefixer: {
-                flexbox: 'no-2009',
-            },
-            stage: 3,
-        },
-        'cssnano': {}
+  parser: "sugarss",
+  plugins: {
+    "postcss-flexbugs-fixes": {},
+    "postcss-preset-env": {
+      autoprefixer: {
+        flexbox: "no-2009",
+      },
+      stage: 3,
     },
+    cssnano: {},
+  },
 };

@@ -1,5 +1,11 @@
+// webpack stats
+analysis
 
 // IDE config file
 .idea
 
+// dist, edit if you don not need build locally
+dist/
+
 // other file
+node_modules
