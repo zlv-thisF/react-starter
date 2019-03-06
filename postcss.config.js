@@ -1,5 +1,5 @@
-module.exports = {
-  parser: "sugarss",
+module.exports = ({ parser }) => ({
+  parser: parser ? "sugarss" : false,
   plugins: {
     "postcss-flexbugs-fixes": {},
     "postcss-preset-env": {
@@ -10,4 +10,4 @@ module.exports = {
     },
     cssnano: {},
   },
-};
+});

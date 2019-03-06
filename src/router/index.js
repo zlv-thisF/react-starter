@@ -1,7 +1,5 @@
 import React from "react";
 
-export const Dashboard = React.lazy(() => import("@/pages/dashboard"));
+export const Todo = React.lazy(() => import("@/pages/todo"));
 
-export const Goods = React.lazy(() => import("@/pages/goods"));
-
-export const Users = React.lazy(() => import("@/pages/users"));
+export const Result = React.lazy(() => import("@/pages/result"));

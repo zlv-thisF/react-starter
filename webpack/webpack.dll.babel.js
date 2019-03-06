@@ -7,6 +7,8 @@ const dllConfig = {
   entry: {
     react: ["react"],
     reactDOM: ["react-dom"],
+    "mobx-react": ["mobx-react-lite"],
+    mobx: ["mobx"],
   },
   output: {
     path: paths.appDll,
