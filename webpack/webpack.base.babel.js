@@ -19,7 +19,7 @@ const REGEXP_IMAGE = /\.(bmp|gif|jpg|jpeg|png|svg)$/;
 
 const baseConfig = {
   context: paths.appRoot,
-  entry: [paths.appIndex],
+  entry: ["whatwg-fetch", paths.appIndex],
   bail: !isProd,
   output: {
     publicPath: paths.PUBLIC_PATH,
@@ -41,12 +41,6 @@ const baseConfig = {
         include: paths.appSrc,
         loader: "eslint-loader",
         options: { cache: true, quiet: true },
-      },
-      {
-        test: REGEXP_TYPESCRIPT,
-        enforce: "pre",
-        include: paths.appSrc,
-        loader: "tslint-loader",
       },
       {
         oneOf: [
@@ -133,7 +127,7 @@ const baseConfig = {
     alias: {
       "@": path.resolve(paths.appSrc),
     },
-    extensions: [".js", "jsx", ".ts", "tsx", ".json"],
+    extensions: [".js", "jsx", ".ts", ".tsx", ".json"],
   },
   node: {
     dgram: "empty",

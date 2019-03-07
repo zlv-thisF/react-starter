@@ -3,41 +3,49 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  parser: "babel-eslint",
-  extends: ['airbnb', 'prettier', 'prettier/react'],
+  parser: "@typescript-eslint/parser",
+  extends: [
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/react",
+    "prettier/@typescript-eslint",
+  ],
   globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly",
   },
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 2018,
-    sourceType: 'module',
+    sourceType: "module",
   },
   plugins: [
-    'react', 'prettier'
+    "@typescript-eslint",
+    "react",
+    "prettier",
   ],
   rules: {
-    "prettier/prettier": "error",
-    "semi": ["error", "always"],
-    "quotes": ["error", "double"],
+    "@typescript-eslint/no-explicit-any": "off",
+    semi: ["error", "always"],
+    quotes: ["error", "double"],
     "no-param-reassign": "off",
     "react/jsx-filename-extension": "off",
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": [
-      "error", {"devDependencies": ["./webpack/**/*", ]}
-    ]
+      "error",
+      { devDependencies: ["./webpack/**/*"] },
+    ],
+    "prettier/prettier": "error",
   },
   settings: {
-    'import/resolver': {
+    "import/resolver": {
       alias: {
-        map: [
-          ["@", "./src"]
-        ],
-        extensions: ['.ts', ".tsx",'.js', '.jsx', '.json']
-      }
-    }
-  }
+        map: [["@", "./src"]],
+        extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
+      },
+    },
+  },
 };
