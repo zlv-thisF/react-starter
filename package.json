@@ -18,7 +18,8 @@
   },
   "lint-staged": {
     "ignore": [
-      "**/dist/*"
+      "**/dist/*",
+      "**/webpack/*"
     ],
     "linters": {
       "*.{js,jsx,ts,tsx}": [
