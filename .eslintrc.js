@@ -28,6 +28,7 @@ module.exports = {
     "prettier",
   ],
   rules: {
+    "@typescript-eslint/interface-name-prefix": "off",
     "@typescript-eslint/no-explicit-any": "off",
     semi: ["error", "always"],
     quotes: ["error", "double"],
