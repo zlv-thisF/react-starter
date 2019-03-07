@@ -1,4 +1,3 @@
-import fetch from "whatwg-fetch";
 import {
   createRequest,
   enhanceHeader,
@@ -13,16 +12,16 @@ class InterceptorManager {
     this.handlers = handlers;
   }
 
-  use = (fullfilled, rejected) => {
+  use = (fullFilled, rejected) => {
     this.handlers.push({
-      fullfilled,
+      fullFilled,
       rejected,
     });
   };
 
   reduceHandlers = promise => {
     this.handlers.reduce((prev, cur) => {
-      return prev.then(cur.fullfilled, cur.rejected);
+      return prev.then(cur.fullFilled, cur.rejected);
     }, promise);
   };
 }
