@@ -9,7 +9,7 @@ const Loadable = (Component: any): any => (props: any): React.ReactElement => (
   </React.Suspense>
 );
 
-const App = () => {
+const App = (): React.ReactElement => {
   return (
     <Router history={history}>
       <Switch>
