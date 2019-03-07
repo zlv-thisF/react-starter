@@ -11,6 +11,7 @@ export default {
   appIndex: resolveApp("src/index"),
   appDist: resolveApp("dist"),
   appNodeModules: resolveApp("node_modules"),
+  appFavicon: resolveApp("public/favicon.ico"),
   appHtml: resolveApp("public/index.html"),
   appPublic: resolveApp("public"),
   appDll: resolveApp("dist/dll"),
