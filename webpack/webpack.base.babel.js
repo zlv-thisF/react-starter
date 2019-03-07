@@ -36,7 +36,7 @@ const baseConfig = {
     rules: [
       { parser: { requireEnsure: false } },
       {
-        test: REGEXP_SCRIPT,
+        test: { or: [REGEXP_SCRIPT, REGEXP_TYPESCRIPT] },
         enforce: "pre",
         include: paths.appSrc,
         loader: "eslint-loader",
