@@ -4,6 +4,7 @@ import OptimizeCSSAssetsPlugin from "optimize-css-assets-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import HtmlWebpackIncludeAssetsPlugin from "html-webpack-include-assets-plugin";
 import CleanWebpackPlugin from "clean-webpack-plugin";
+import CopyWebpackPlugin from "copy-webpack-plugin";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 import baseConfig from "./webpack.base.babel";
 import dllConfig from "./webpack.dll.babel";
@@ -39,6 +40,13 @@ const prodConfig = {
         minifyURLs: true,
       },
     }),
+    new CopyWebpackPlugin([
+      {
+        from: paths.appPublic,
+        to: paths.appDist,
+        ignore: ["*.html"],
+      },
+    ]),
     USE_DLL &&
       new HtmlWebpackIncludeAssetsPlugin({
         assets: [{ path: "dll", glob: "*.js" }],

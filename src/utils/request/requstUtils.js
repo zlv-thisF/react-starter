@@ -18,9 +18,12 @@ export const createRequest = (fn, obj) => {
 };
 
 export const enhanceHeader = config => {
-  return Object.assign(config.header || {}, {
-    credential: "include",
-  });
+  return {
+    ...config,
+    headers: Object.assign(config.header || {}, {
+      credential: "include",
+    }),
+  };
 };
 
 export const enhanceContentType = config => {
@@ -71,7 +74,7 @@ export const formatResponse = res => {
   const contentType = res.headers.get("content-type");
   let responseType = "";
   if (contentType) {
-    [responseType] = RESPONSE_TYPES.filter(p => p.includes(contentType));
+    [responseType] = RESPONSE_TYPES[contentType];
   }
   return responseType ? res[responseType]() : res;
 };
